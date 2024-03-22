@@ -4,6 +4,7 @@ userinput.max = new Date().toISOString().split("T")[0];
 
 let submitButton = document.getElementById('btn');
 let result = document.getElementById('result');
+let req = document.getElementById('area');
 
 
 submitButton.addEventListener('click', calculateAge);
@@ -45,6 +46,7 @@ function calculateAge(){
         y3--;
         m3=11;
     }
+    req.classList.add("bg-gradient-to-r", "from-purple-500", "via-pink-500", "to-red-500");
 result.innerHTML = `You are ${y3} years,${m3} months,${d3} days`;
     
 }
